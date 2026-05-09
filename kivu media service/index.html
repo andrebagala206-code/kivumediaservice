@@ -1,0 +1,417 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>kivu service - Media Mariage & Evenement Bukavu</title>
+    <meta name="description" content="kivu service, Media professionnelle à bukavu . mariage, dot, concert, anniversaire au kivu. Reservation whatsApp 0992126727.">
+    <meta name="keywords" content="photographie Bukavu, dot Bukavu, photographie kivu, kivu service, videographie kivu">
+    <meta name="author" content="kivu service">
+    <link rel="stylesheet" href="style.css">
+    </head>
+<body>
+    <nav class="navbar">
+    
+        <div class="logo"> KIVU SERVICE MEDIA </div>
+        <div class="bibi" style="width: auto; height :4px max-hieght 4px; object-fit:contain; vertical-align:middle;
+    display: flex; gap: 12px ; border-radius: 8px;">
+        <img src="tof/logo.jpg" alt="logo du groupe">
+    </div>
+    
+        <button class="dark-mode-toggle" id="darkModeToggle">Mode sombre</button>
+        <ul class="nav-links">
+            <li><a href="#accueil" class="nav-btn active" data-page="accueil">Accueil</a></li>
+            <li><a href="#reservation" class="nav-btn" data-page="reservation">Réservation</a></li>
+            <li><a href="#formation" class="nav-btn" data-page="formation">Formation</a></li>
+            <li><a href="#apropos" class="nav-btn" data-page="apropos">À propos</a></li>
+            <li><a href="#aide" class="nav-btn" data-page="aide">Soutien</a></li>
+        </ul>
+    </nav>
+
+    <section id="accueil" class="page active">
+        <header class="hero">
+            <h1 class="fade-in">Bienvenue chez Kivu Media Service  </h1>
+            <div class="hero-badge">⭐ Photographe recommandé par plus de 150 mairiés du Kivu⭐</div>
+            <p class="slide-up">Immortalisez vos moments de joie au Kivu Media Service </p>
+            <br>
+            <a href="#reservation" class="btn pulse nav-btn" data-page="reservation">✨ Réserver maintenant ✨</a>
+        </header>
+        <div class="oeuvres">
+            <h2>📂 Nos Œuvres Récentes</h2>
+
+            <div class="filter-buttons">
+                <button class="filter-btn active" data-filter="all">📷 Tous</button>
+                <button class="filter-btn" data-filter="mariage">💍 Mariage</button>
+                <button class="filter-btn" data-filter="dot">🍽️ Kitchen/Dot</button>
+                <button class="filter-btn" data-filter="affiche">🖼️ cadre/affiche</button>
+                <button class="filter-btn" data-filter="autre">📷 autres</button>
+            </div>
+            
+            <div class="gallery">
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_1.jpg" alt=" photo de Mariage a goma par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_35.jpg" alt="photo de dot a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_37.jpg" alt="photo de Mariage a goma par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_44.jpg" alt="photo de Mariage a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_2.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="defense"><img src="tof/tof_23.jpg" alt="photo de defense a bukavu par kivu service"><p>defense</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_47.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>Affiche</p></div>
+                <div class="card zoom-in" data-category="autre"><img src="tof/tof_8.jpg" alt="photo tranditionnelle a bukavu par kivu service"><p>Photo traditionnelle</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_3.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_4.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_6.jpg" alt="photo de mariage Civil a bukavu par kivu service "><p>Civil</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_7.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>Affiche</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_5.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_42.jpg" alt="photo de dot a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_28.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage </p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_29.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_27.jpg" alt="le cadre a bukavu par kivu service"><p> cadre</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_9.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>Affiche</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_30.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_31.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="autre"><img src="tof/tof_15.jpg" alt="photo de defense a bukavu par kivu service"><p>defense</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_16.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>affiche</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_22.jpg" alt="save the date a bukavu par kivu service"><p>save the date</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_10.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>Affiche</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_11.jpg" alt="le cadre a bukavu par kivu service"><p>cadre</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_40.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Dot</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_41.jpg" alt="photo de Mariage a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="autre"><img src="tof/tof_21.jpg" alt="invitation de mariage a goma par kivu service"><p>Invitation</p></div>
+                <div class="card zoom-in" data-category="autre"><img src="tof/tof_19.jpg" alt="photo de kitchen part"><p>kitchen part</p></div>
+                <div class="card zoom-in" data-category="aitre"><img src="tof/tof_17.jpg" alt="photo de defense a bukavu par kivu service"><p>defense </p></div>
+                <div class="card zoom-in" data-category="autre"><img src="tof/tof_18.jpg" alt="shooting simple a bukavu par kivu service"><p>shooting simple</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_45.jpg" alt="photo de Mariage a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_48.jpg" alt="bache a bukavu par kivu service"><p> bache</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_12.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_13.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_33.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Dot</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_20.jpg" alt="save the date a bukavu par kivu service"><p>save the date</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_49.jpg" alt="photo d'Affiche a bukavu par kivu service"><p>Affiche</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_43.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_38.jpg" alt="photo de Mariage a bukavu par kivu service"><p> Dot</p></div>
+                <div class="card zoom-in" data-category="mariage"><img src="tof/tof_39.jpg" alt="photo de Mariage a bukavu par kivu service"><p>Mariage</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_25.jpg" alt="le cadre a bukavu par kivu service"><p>cadre</p></div>
+                <div class="card zoom-in" data-category="dot"><img src="tof/tof_32.jpg" alt="photo de dot a bukavu par kivu service"><p>dot</p></div>
+                <div class="card zoom-in" data-category="affiche"><img src="tof/tof_26.jpg" alt="le cadre a bukavu par kivu service"><p>cadre</p></div>
+            </div>
+        </div>
+
+        <!-- Compteur de mariages -->
+        <div class="counter-section">
+            <div class="counter-number" id="counterNumber">250+</div>
+            <p>🤵 Mariages déjà immortalisés 👰</p>
+            <small>et toujours plus de moments magiques</small>
+        </div>
+
+        <!-- Témoignages clients -->
+        <div class="container">
+            <div class="testimonials">
+                <h2 style="text-align: center; margin-bottom: 20px;">⭐ Ce que nos clients disent</h2>
+                <div class="testimonial-card">
+                    <p>"kivu media service a capturé chaque instant de notre mariage avec tant d'émotion. Les photos sont magnifiques !"</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-name">-- Grace & Patient, Bukavu</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Professionnel, ponctuel et très créatif. Notre kitchen party restera gravé grâce à lui."</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-name">-- Nadège, Uvira</div>
+                </div>
+
+                <div class="testimonial-card">
+                    <p>"Je recommande vivement ! Les photos du concert étaient dignes d'un reportage international."</p>
+                    <div class="testimonial-stars">★★★★★</div>
+                    <div class="testimonial-name">-- Claude , Goma </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section>
+    <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Aperçu photo en grand">
+        <button class="lightbox-close" id="lightbox-close" aria-label="Fermer l'aperçu">&times;</button>
+        <img src="" alt="" id="lightbox-img">
+    </div>
+    </section>
+
+    <section id="reservation" class="page">
+        <div class="container">
+            <h1>📅 Réservez votre séance</h1>
+            <div class="tarifs">
+                <h2>💰 Nos Tarifs </h2>
+                <table>
+                    <tr><td>💒 Mariage religieux</td><td>200$</td></tr>
+                    <tr><td>🏛️ Mariage civil</td><td>100$</td></tr>
+                    <tr><td>🍽️ Kitchen Party / Dot</td><td>80$</td></tr>
+                    <tr><td>🎬 Videographie mariage kit complet </td> <td>300$</td></tr>
+                    <tr><td>🎂 Anniversaire</td><td>30$</td></tr>
+                    <tr><td>🎵 Concert</td><td>30$</td></tr>
+                    <tr><td>💞 ceremonie Save the Date</td><td>40$</td></tr>
+                    <tr><td>✨ Shooting simple</td><td>2$</td></tr>
+                    <tr><td>🖼️ Cadre</td><td>15$ </td></tr>
+                    <tr><td>🖨️ bache </td><td>15$</td></tr>
+                    <tr><td>🖼️ Affiche </td><td>5$</td></tr>
+                    <tr><td>📷 bapteme </td><td>30$</td></tr>
+                    <tr><td>🥂 collation</td><td>30$</td></tr>
+                    <tr><td>🎓 défense </td><td>20$</td></tr>
+                    <tr><td>🌍 photo traditionnelle</td><td>40$</td></tr>
+                </table>
+            </div>
+            <form id="formReservation">
+                <h2>📝 Formulaire de réservation</h2>
+                <input type="text" id="nom" placeholder="Nom complet" required>
+                <input type="tel" id="whatsapp" placeholder="Votre numéro WhatsApp:09.../08..."pattern="[0-9]{9,12}"required>
+                <span class="error-msg" id="whatsapp-error" style="display:none;">Numero invalide.Ex:0992126727</span>
+                <input type="text" id="insta" placeholder="Votre Instagram">
+                <input type="text" id="facebook" placeholder="Votre Facebook">
+                <input type="date" id="date" required>
+                <select id="ceremonie" required>
+                    <option value="">Type de cérémonie</option>
+                    <option>💒 Mariage religieux</option>
+                    <option>🏛️ Mariage civil</option>
+                    <option>🍽️ Kitchen Party</option>
+                    <option>🎬 Videographie mariage kit complet</option>
+                    <option>🎂 Anniversaire</option>
+                    <option>🎵 Concert</option>
+                    <option>💞 ceremonie Save the Date</option>
+                    <option>✨ Shooting simple</option>
+                    <option>🖼️ conception de Cadre</option>
+                    <option>🖨️ conception du bache</option>
+                    <option>🖼️ conception d'une Affiche </option>
+                    <option>🥂 collation</option>
+                    <option>📷 bapteme</option>
+                    <option>🎓 défense</option>
+                    <option>🌍 photo traditionnelle</option>
+                </select>
+                <textarea id="details" placeholder="Détails : lieu, heure, demandes spéciales..." rows="4"></textarea>
+                <button type="submit" class="btn">Envoyer sur WhatsApp</button>
+            </form>
+
+            <div class="gift-card" style="background: linear-gradient(135deg, #f9a825, #f57f17); color: white; padding: 20px; border-radius: 15px; text-align: center; margin: 20px 0;">
+                <h3>🎁 Offrez un bon cadeau !</h3>
+                <p>Une séance photo à offrir à vos proches. Contactez-nous pour personnaliser votre bon.</p>
+                <p style="margin-top: 10px;"><strong>📞 WhatsApp : 0992126727</strong></p>
+            </div>
+
+            <!-- 5. DEEP LINKS PAIEMENT MOBILE MONEY -->
+            <div class="pay-section" style="margin: 30px 0;">
+                <h2>💳 Payer directement</h2>
+                <p style="margin-bottom: 15px;">Cliquez sur votre opérateur pour payer instantanément :</p>
+                <div class="pay-grid">
+                    <a href="tel:*501*0992126727*1%23" class="pay-btn pay-airtel" aria-label="Payer via Airtel Money">
+                        📱 Airtel Money -- Payer
+                    </a>
+                    <a href="tel:*144*0855174586*1%23" class="pay-btn pay-orange" aria-label="Payer via Orange Money">
+                        🟠 Orange Money -- Payer
+                    </a>
+                    <a href="https://wa.me/243905501305?text=Bonjour%20Julien,%20je%20veux%20payer%20par%20M-Pesa%20pour%20une%20séance" class="pay-btn pay-mpesa" aria-label="Payer via M-Pesa via WhatsApp">
+                        💚 M-Pesa -- Payer via WhatsApp
+                    </a>
+                    <a href="https://wa.me/243905501305?text=Bonjour%20Julien,%20je%20veux%20payer%20par%20Afrimoney" class="pay-btn pay-afrimoney" aria-label="Payer via Afrimoney via WhatsApp">
+                        🌍 Afrimoney -- Payer via WhatsApp
+                    </a>
+                </div>
+                <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">💡 Les liens USSD fonctionnent directement sur téléphone. Pour M-Pesa/Afrimoney, envoyez un message WhatsApp.</p>
+            </div>
+
+            <div class="contact-info">
+                <h3>📞Nos contacts</h3>
+                <br>
+                <p><strong>WhatsApp :</strong> 0905501305</p>
+                <p><strong>Facebook :</strong> Chrispin David</p>
+                <p><strong>Email :</strong> davidbuhendwachrispin@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0992126727</p>
+                <p><strong>Facebook :</strong> Julien André</p>
+                <p><strong>Email :</strong> andrebagala206@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0995134147</p>
+                <p><strong>Facebook :</strong> Iragi dunia Wema </p>
+                <p><strong>Email :</strong> iragidunia24@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0843242086</p>
+                <p><strong>Facebook :</strong> Bébé reponse pascal</p>
+                <p><strong>Email :</strong> reponsepascal261@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0977131493</p>
+                <p><strong>Facebook :</strong> Rachid Kyondo Radieux Rkr</p>
+                <p><strong>Email :</strong> rachidkyondoradieux7@gmail.com</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="formation" class="page">
+        <div class="container">
+            <h1>🎓 Formation Photographie</h1>
+            <div class="tarifs">
+                <h2>📚 Nos Packs Formation</h2>
+                <table>
+                    <tr><td>📖 Débutant - 1 mois</td><td>100$</td></tr>
+                    <tr><td>📘 Intermédiaire - 2 mois</td><td>180$</td></tr>
+                    <tr><td>🎓 Pro - 3 mois + stage</td><td>300$</td></tr>
+                </table>
+            </div>
+            <h3>✅ Conditions</h3>
+            <ul class="conditions">
+                <li>✔️ Avoir 16 ans minimum</li>
+                <li>✔️ Avoir un appareil photo ou smartphone qualité et un Ordinateur</li>
+                <li>✔️ Être disponible 3x par semaine</li>
+                <li>✔️ Paiement 50% avant début</li>
+            </ul>
+            <form id="formFormation">
+                <h2>Inscription Formation</h2>
+                <input type="text" id="nomForm" placeholder="Nom complet" required>
+                <input type="tel" id="whatsappForm" placeholder="Votre WhatsApp" required>
+                <select id="packForm" required>
+                    <option value="">Choisir un pack</option>
+                    <option>📖 Débutant - 100$</option>
+                    <option>📘 Intermédiaire - 180$</option>
+                    <option>🎓 Pro - 300$</option>
+                </select>
+                <textarea id="motivation" placeholder="Pourquoi tu veux apprendre la photo ?" rows="4"></textarea>
+                <button type="submit" class="btn">📲 Envoyer demande</button>
+            </form>
+        </div>
+    </section>
+
+    <section id="apropos" class="page">
+        <h1 style="text-align: center;">👤 À propos </h1>
+
+        <div class="container">
+            <h3>Chrispin David </h3>
+            <div class="about-content">
+                <img src="tof/tof_chris.jpg" alt="Julien André" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 5 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>💍 +200 mariages couverts à Bukavu, Goma, Uvira</li>
+                        <li>🎵 Photographe officiel du Festival Amani 2024</li>
+                        <li>🎓 Formé 10 jeunes photographes depuis 2022</li>
+                        <li> Matériel Pro : <ol><li>Nikon D700 + objectifs 50mm, 85mm 📷</li> <li>Ordinateurs💻</li></ol></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Julien Andre</h3>
+            <div class="about-content">
+                <img src="tof/tof_jul.jpg" alt="Julien André" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 2 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>💍 +10 mariages couverts à Bukavu, Goma</li>
+                        <li>🎓 Formé 2 jeunes photographes depuis 2025</li>
+                        <li>Matériel Pro : <ol><li>Nikon D5100 + objectifs 50mm, 85mm📷</li><li>Ordinateurs💻</li></ol>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3>Pascal Reponse </h3>
+            <div class="about-content">
+                <img src="tof/tof_pasc.jpg" alt="Julien André" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 3 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>💍 +15 mariages couverts à Bukavu, Goma, Uvira</li>
+                        <li>🎓 Formé 15 jeunes photographes depuis 2022</li>
+                        <li>Matériel Pro : <ol><li>Canon R6 + objectifs 24-70mm, 85mm📷</li><li>Ordinateurs💻</li></ol></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+            <div class="container">
+            <h3>Iragi Dunia </h3>
+            <div class="about-content">
+                <img src="tof/tof_iragi.jpg" alt="Julien André" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 5 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>💍 +13 mariages couverts à Bukavu, Goma, Uvira</li>
+                        <li>🎓 Formé 15 jeunes photographes depuis 2022</li>
+                        <li>Matériel Pro :Nikon D5100+ objectifs 24-70mm, 85mm📷</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="container">
+            <h3> Rarieux Rachid </h3>
+            <div class="about-content">
+                <img src="tof/tof_rad.jpg" alt="phoyo radieux" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 2 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>service media de l'</li>
+                        <li>photographe de BIRAVA Gospel </li>
+                        <li>🎓 Formé 2 jeunes photographes depuis 2022</li>
+                        <li>Matériel Pro :Canon 7D + objectifs 28mm-85mm📷</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    
+
+            <!-- QR Code de partage -->
+            <div class="qrcode">
+                <h3>📱 Partagez ce site</h3>
+                <p>Scannez ce QR Code pour partager mon portfolio avec vos amis</p>
+                <img src="https://api.qrserver.com/v1/create-qr-code/?size=150x150&data=https://kivumediaservice.bukavu" alt="QR Code kivu service Photographe">
+                <p style="font-size: 0.8rem; margin-top: 10px;">Ou partagez le lien : kivuservicephotographe.bukavu</p>
+            
+            <!-- Google Maps intégré -->
+            <div class="map-container">
+                <h3>📍 Où me trouver ?</h3>
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d254943.57062064652!2d28.75161665!3d-2.5023429999999997!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x19c29cf0cfadc683%3A0xe67d900c176249ef!2sBukavu%2C%20R%C3%A9publique%20d%C3%A9mocratique%20du%20Congo!5e0!3m2!1sfr!2sfr!4v1711529456789!5m2!1sfr!2sfr" allowfullscreen loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            </div>
+            </div>
+
+            
+    </section>
+
+    <section id="aide" class="page">
+        <div class="container">
+            <h1>Soutenir KIVU MEDIA SERVICE</h1>
+            <p>Tu veux nous aider à acheter du nouveau matériel ? Envoie directement sur :</p>
+            <div class="money-grid">
+                <div class="money-card"><h3>📱Airtel Money</h3><p>0992126727</p><p>Nom : marie ange</p></div>
+                <div class="money-card"><h3>🟠Orange Money</h3><p>0855174586</p><p>Nom : sylvain byamungu</p></div>
+                <div class="money-card"><h3>💚M-Pesa</h3><p>0824431112</p><p>Nom : Iragi wema</p></div>
+                <div class="money-card"><h3>🌍Afrimoney</h3><p>0905501305 </p><p>Nom : Chrispin david</p></div>
+            </div>
+            <p class="merci">Merci pour ton soutien 🙏 Chaque don aide un jeune à apprendre la photo.</p>
+        </div>
+    </section>
+    <div class="scroll-top" id="scrollTop">⬆️</div>
+
+    <!-- 6. WIDGET WHATSAPP FLOTTANT -->
+    <a href="https://wa.me/243905501305?text=Bonjour%20Julien%20!%20Je%20suis%20intéressé(e)%20par%20vos%20services%20de%20photographie" 
+            class="whatsapp-float" 
+        target="_blank"
+        rel="noopener noreferrer"
+        aria-label="Discuter avec Kivu Media Service sur WhatsApp">
+            <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+        </svg>
+    </a>
+
+    <footer>
+        <p>© 2026 Photographe kivu service  | WhatsApp: 0905501305 | Email: andrebagala206@gmail.com</p>
+        <p style="margin-top: 10px; font-size: 0.8rem;">📸 Immortalisons vos plus beaux moments ensemble</p>
+    </footer>
+</body>
+<script src="script.js"></script>
+</html>
