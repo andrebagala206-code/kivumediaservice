@@ -11,11 +11,12 @@
     </head>
 <body>
     <nav class="navbar">
-    
-        <div class="logo"> KIVU SERVICE MEDIA </div>
-        <div class="bibi" style="width: auto; height :4px max-hieght 4px; object-fit:contain; vertical-align:middle;
+            <div class="bibi" style="width: auto; height :4px max-hieght 4px; object-fit:contain; vertical-align:middle;
     display: flex; gap: 12px ; border-radius: 8px;">
-        <img src="tof/logo.jpg" alt="logo du groupe">
+        <img src="tof/logo.png" alt="logo du groupe">
+    
+        <div class="logo" style="font-family: Cambria"> KIVU SERVICE MEDIA📷</div>
+    
     </div>
     
         <button class="dark-mode-toggle" id="darkModeToggle">Mode sombre</button>
@@ -30,8 +31,8 @@
 
     <section id="accueil" class="page active">
         <header class="hero">
-            <h1 class="fade-in">Bienvenue chez Kivu Media Service  </h1>
-            <div class="hero-badge">⭐ Photographe recommandé par plus de 150 mairiés du Kivu⭐</div>
+            <h1 class="fade-in">Bienvenue chez Kivu Media Service📷  </h1>
+            <div class="hero-badge">⭐ Photographe recommandé par plus de 150 mariés du Kivu⭐</div>
             <p class="slide-up">Immortalisez vos moments de joie au Kivu Media Service </p>
             <br>
             <a href="#reservation" class="btn pulse nav-btn" data-page="reservation">✨ Réserver maintenant ✨</a>
@@ -140,35 +141,41 @@
             <div class="tarifs">
                 <h2>💰 Nos Tarifs </h2>
                 <table>
-                    <tr><td>💒 Mariage religieux</td><td>200$</td></tr>
-                    <tr><td>🏛️ Mariage civil</td><td>100$</td></tr>
-                    <tr><td>🍽️ Kitchen Party / Dot</td><td>80$</td></tr>
-                    <tr><td>🎬 Videographie mariage kit complet </td> <td>300$</td></tr>
+                    <tr><td>🎬📷 Mariage complet photo/video</td><td>300$</td></tr>
+                    <tr><td>🍽️ Kitchen Party </td><td>30$</td></tr>
+                    <tr><td>💞 Discussion</td><td>35$</td></tr>
+                    <tr><td>🍽️ Dot </td><td>35$</td></tr>
                     <tr><td>🎂 Anniversaire</td><td>30$</td></tr>
                     <tr><td>🎵 Concert</td><td>30$</td></tr>
+                    <tr><td>📷 Conference </td><td>30$</td></tr>
                     <tr><td>💞 ceremonie Save the Date</td><td>40$</td></tr>
-                    <tr><td>✨ Shooting simple</td><td>2$</td></tr>
+                    <tr><td>📷 Fete d'aurevoire scolaire </td><td>25$</td></tr>
+                    <tr><td>✨ Shooting simple</td><td>1$ / 2500fc</td></tr>
+                    <tr><td>📷 culte de jeune </td><td>20$</td></tr>
                     <tr><td>🖼️ Cadre</td><td>15$ </td></tr>
                     <tr><td>🖨️ bache </td><td>15$</td></tr>
+                    <tr><td>📷 Media dans l'eglise </td><td>25$</td></tr>
                     <tr><td>🖼️ Affiche </td><td>5$</td></tr>
                     <tr><td>📷 bapteme </td><td>30$</td></tr>
                     <tr><td>🥂 collation</td><td>30$</td></tr>
                     <tr><td>🎓 défense </td><td>20$</td></tr>
-                    <tr><td>🌍 photo traditionnelle</td><td>40$</td></tr>
+                    <tr><td>📷 Deuil </td><td>25$</td></tr>
+                    <tr><td>🌍 1 photo traditionnelle</td><td>1$ / 2500fc </td></tr>
                 </table>
+                <p>pour la photo/video multiplier la somme par 2 (X2)</p>
             </div>
             <form id="formReservation">
                 <h2>📝 Formulaire de réservation</h2>
-                <input type="text" id="nom" placeholder="Nom complet" required>
-                <input type="tel" id="whatsapp" placeholder="Votre numéro WhatsApp:09.../08..."pattern="[0-9]{9,12}"required>
+                <input type="text" id="nom" name="nom" placeholder="Nom complet" required>
+                <input type="tel" id="whatsapp" name="whatsapp" placeholder="Votre numéro WhatsApp:09.../08..."pattern="[0-9]{9,12}"required>
                 <span class="error-msg" id="whatsapp-error" style="display:none;">Numero invalide.Ex:0992126727</span>
-                <input type="text" id="insta" placeholder="Votre Instagram">
-                <input type="text" id="facebook" placeholder="Votre Facebook">
-                <input type="date" id="date" required>
+                <input type="text" id="insta" name="insta" placeholder="Votre Instagram">
+                <input type="text" id="facebook" name="facebook" placeholder="Votre Facebook">
+                <input type="date" id="date" name="date" required>
                 <select id="ceremonie" required>
                     <option value="">Type de cérémonie</option>
-                    <option>💒 Mariage religieux</option>
-                    <option>🏛️ Mariage civil</option>
+                    <option>💒 Mariage </option>
+                    <option>🏛️ Discussion</option>
                     <option>🍽️ Kitchen Party</option>
                     <option>🎬 Videographie mariage kit complet</option>
                     <option>🎂 Anniversaire</option>
@@ -176,11 +183,17 @@
                     <option>💞 ceremonie Save the Date</option>
                     <option>✨ Shooting simple</option>
                     <option>🖼️ conception de Cadre</option>
+                    <option>📷 Fete d'aurevoire scolaire</option>
                     <option>🖨️ conception du bache</option>
+                    <option>📷 Conference</option>
                     <option>🖼️ conception d'une Affiche </option>
                     <option>🥂 collation</option>
+                    <option>📷 culte de jeune</option>
                     <option>📷 bapteme</option>
                     <option>🎓 défense</option>
+                    <option>📷 Media dans l'eglise</option>
+                    <option>🍽️ Dot</option>
+                    <option>📷 Deuil</option>
                     <option>🌍 photo traditionnelle</option>
                 </select>
                 <textarea id="details" placeholder="Détails : lieu, heure, demandes spéciales..." rows="4"></textarea>
@@ -204,39 +217,17 @@
                     <a href="tel:*144*0855174586*1%23" class="pay-btn pay-orange" aria-label="Payer via Orange Money">
                         🟠 Orange Money -- Payer
                     </a>
-                    <a href="https://wa.me/243905501305?text=Bonjour%20Julien,%20je%20veux%20payer%20par%20M-Pesa%20pour%20une%20séance" class="pay-btn pay-mpesa" aria-label="Payer via M-Pesa via WhatsApp">
+                    <a href="https://wa.me/243992126727?text=Bonjour%20KivuMediaService,%20je%20veux%20payer%20par%20M-Pesa%20pour%20une%20séance" class="pay-btn pay-mpesa" aria-label="Payer via M-Pesa via WhatsApp">
                         💚 M-Pesa -- Payer via WhatsApp
                     </a>
-                    <a href="https://wa.me/243905501305?text=Bonjour%20Julien,%20je%20veux%20payer%20par%20Afrimoney" class="pay-btn pay-afrimoney" aria-label="Payer via Afrimoney via WhatsApp">
+                    <a href="https://wa.me/243992126727?text=Bonjour%20KivuMediaService,%20je%20veux%20payer%20par%20Afrimoney" class="pay-btn pay-afrimoney" aria-label="Payer via Afrimoney via WhatsApp">
                         🌍 Afrimoney -- Payer via WhatsApp
                     </a>
                 </div>
                 <p style="font-size: 0.85rem; color: #666; margin-top: 10px;">💡 Les liens USSD fonctionnent directement sur téléphone. Pour M-Pesa/Afrimoney, envoyez un message WhatsApp.</p>
             </div>
 
-            <div class="contact-info">
-                <h3>📞Nos contacts</h3>
-                <br>
-                <p><strong>WhatsApp :</strong> 0905501305</p>
-                <p><strong>Facebook :</strong> Chrispin David</p>
-                <p><strong>Email :</strong> davidbuhendwachrispin@gmail.com</p>
-                <br>
-                <p><strong>WhatsApp :</strong> 0992126727</p>
-                <p><strong>Facebook :</strong> Julien André</p>
-                <p><strong>Email :</strong> andrebagala206@gmail.com</p>
-                <br>
-                <p><strong>WhatsApp :</strong> 0995134147</p>
-                <p><strong>Facebook :</strong> Iragi dunia Wema </p>
-                <p><strong>Email :</strong> iragidunia24@gmail.com</p>
-                <br>
-                <p><strong>WhatsApp :</strong> 0843242086</p>
-                <p><strong>Facebook :</strong> Bébé reponse pascal</p>
-                <p><strong>Email :</strong> reponsepascal261@gmail.com</p>
-                <br>
-                <p><strong>WhatsApp :</strong> 0977131493</p>
-                <p><strong>Facebook :</strong> Rachid Kyondo Radieux Rkr</p>
-                <p><strong>Email :</strong> rachidkyondoradieux7@gmail.com</p>
-            </div>
+            
         </div>
     </section>
 
@@ -260,8 +251,8 @@
             </ul>
             <form id="formFormation">
                 <h2>Inscription Formation</h2>
-                <input type="text" id="nomForm" placeholder="Nom complet" required>
-                <input type="tel" id="whatsappForm" placeholder="Votre WhatsApp" required>
+                <input type="text" id="nomForm" name="nomForm" placeholder="Nom complet" required>
+                <input type="tel" id="whatsappForm" name="whatsappForm" placeholder="Votre WhatsApp" required>
                 <select id="packForm" required>
                     <option value="">Choisir un pack</option>
                     <option>📖 Débutant - 100$</option>
@@ -271,6 +262,34 @@
                 <textarea id="motivation" placeholder="Pourquoi tu veux apprendre la photo ?" rows="4"></textarea>
                 <button type="submit" class="btn">📲 Envoyer demande</button>
             </form>
+        
+
+        <div class="contact-info" >
+                <h3>📞Nos contacts</h3><br>
+                <p><strong>WhatsApp :</strong> 0977131493</p>
+                <p><strong>Facebook :</strong> Rachid Kyondo Radieux Rkr</p>
+                <p><strong>Email :</strong> rachidkyondoradieux7@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0992126727</p>
+                <p><strong>Facebook :</strong> Julien André</p>
+                <p><strong>Email :</strong> andrebagala206@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0843242086</p>
+                <p><strong>Facebook :</strong> Bébé reponse pascal</p>
+                <p><strong>Email :</strong> reponsepascal261@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0995134147</p>
+                <p><strong>Facebook :</strong> Iragi dunia Wema </p>
+                <p><strong>Email :</strong> iragidunia24@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0905501305</p>
+                <p><strong>Facebook :</strong> Chrispin David</p>
+                <p><strong>Email :</strong> davidbuhendwachrispin@gmail.com</p>
+                <br>
+                <p><strong>WhatsApp :</strong> 0899446697</p>
+                <p><strong>Facebook :</strong> Grace Akomkwa gan</p>
+                <p><strong>Email :</strong> gracenfune_13@icloud.com</p>
+            </div>
         </div>
     </section>
 
@@ -278,18 +297,18 @@
         <h1 style="text-align: center;">👤 À propos </h1>
 
         <div class="container">
-            <h3>Chrispin David </h3>
+            <h3> Rarieux Rachid </h3>
             <div class="about-content">
-                <img src="tof/tof_chris.jpg" alt="Julien André" class="profil">
+                <img src="tof/tof_rad.jpg" alt="phoyo radieux" class="profil">
                 <div>
                     <h2>Mon Parcours</h2>
-                    <p>Photographe professionnel à Bukavu depuis 5 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <p>Photographe professionnel à Bukavu depuis 2 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
                     <h2>Expériences</h2>
                     <ul class="conditions">
-                        <li>💍 +200 mariages couverts à Bukavu, Goma, Uvira</li>
-                        <li>🎵 Photographe officiel du Festival Amani 2024</li>
-                        <li>🎓 Formé 10 jeunes photographes depuis 2022</li>
-                        <li> Matériel Pro : <ol><li>Nikon D700 + objectifs 50mm, 85mm 📷</li> <li>Ordinateurs💻</li></ol></li>
+                        <li>service media de l'eglise Ism</li>
+                        <li>photographe de BIRAVA Gospel </li>
+                        <li>🎓 Formé 2 jeunes photographes depuis 2022</li>
+                        <li>Matériel Pro :Canon 7D + objectifs 28mm-85mm📷</li>
                     </ul>
                 </div>
             </div>
@@ -329,6 +348,24 @@
             </div>
         </div>
 
+        <div class="container">
+            <h3>Chrispin David </h3>
+            <div class="about-content">
+                <img src="tof/tof_chris.jpg" alt="Julien André" class="profil">
+                <div>
+                    <h2>Mon Parcours</h2>
+                    <p>Photographe professionnel à Bukavu depuis 5 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
+                    <h2>Expériences</h2>
+                    <ul class="conditions">
+                        <li>💍 +200 mariages couverts à Bukavu, Goma, Uvira</li>
+                        <li>🎵 Photographe officiel du Festival Amani 2024</li>
+                        <li>🎓 Formé 10 jeunes photographes depuis 2022</li>
+                        <li> Matériel Pro : <ol><li>Nikon D700 + objectifs 50mm, 85mm 📷</li> <li>Ordinateurs💻</li></ol></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
             <div class="container">
             <h3>Iragi Dunia </h3>
             <div class="about-content">
@@ -346,25 +383,25 @@
             </div>
         </div>
 
+
         <div class="container">
-            <h3> Rarieux Rachid </h3>
+            <h3> Grace Akonkwa </h3>
             <div class="about-content">
-                <img src="tof/tof_rad.jpg" alt="phoyo radieux" class="profil">
+                <img src="tof/tof_gra.jpg" alt="photo Grace" class="profil">
                 <div>
                     <h2>Mon Parcours</h2>
                     <p>Photographe professionnel à Bukavu depuis 2 ans. Spécialisé dans les mariages, dots et événements culturels du Kivu.</p>
                     <h2>Expériences</h2>
                     <ul class="conditions">
                         <li>service media de l'</li>
-                        <li>photographe de BIRAVA Gospel </li>
+                        <li>photographe  </li>
                         <li>🎓 Formé 2 jeunes photographes depuis 2022</li>
-                        <li>Matériel Pro :Canon 7D + objectifs 28mm-85mm📷</li>
+                        <li>Matériel Pro :nikon D5100 + objectifs 28mm-85mm📷</li>
                     </ul>
                 </div>
             </div>
         </div>
     
-
             <!-- QR Code de partage -->
             <div class="qrcode">
                 <h3>📱 Partagez ce site</h3>
@@ -387,7 +424,7 @@
             <h1>Soutenir KIVU MEDIA SERVICE</h1>
             <p>Tu veux nous aider à acheter du nouveau matériel ? Envoie directement sur :</p>
             <div class="money-grid">
-                <div class="money-card"><h3>📱Airtel Money</h3><p>0992126727</p><p>Nom : marie ange</p></div>
+                <div class="money-card"><h3>📱Airtel Money</h3><p>0992126727</p><p>Nom : Marie Ange</p></div>
                 <div class="money-card"><h3>🟠Orange Money</h3><p>0855174586</p><p>Nom : sylvain byamungu</p></div>
                 <div class="money-card"><h3>💚M-Pesa</h3><p>0824431112</p><p>Nom : Iragi wema</p></div>
                 <div class="money-card"><h3>🌍Afrimoney</h3><p>0905501305 </p><p>Nom : Chrispin david</p></div>
@@ -398,7 +435,7 @@
     <div class="scroll-top" id="scrollTop">⬆️</div>
 
     <!-- 6. WIDGET WHATSAPP FLOTTANT -->
-    <a href="https://wa.me/243905501305?text=Bonjour%20Julien%20!%20Je%20suis%20intéressé(e)%20par%20vos%20services%20de%20photographie" 
+    <a href="https://wa.me/243992126727?text=Bonjour%20kivu-media-service%20!%20Je%20suis%20intéressé(e)%20par%20vos%20services%20de%20photographie" 
             class="whatsapp-float" 
         target="_blank"
         rel="noopener noreferrer"
@@ -409,7 +446,10 @@
     </a>
 
     <footer>
-        <p>© 2026 Photographe kivu service  | WhatsApp: 0905501305 | Email: andrebagala206@gmail.com</p>
+        <p>© 2026 Photographe kivu Media service | WhatsApp: 0992126727 | Email: andrebagala206@gmail.com</p>
+        <P>consulte notre compte tiktok <a href="https://vm.tiktok.com/ZS9Fm281bE4L7-v57iN/">cliquez ici pour acceder à notre compte tiktok</a></P>
+        <p>consulter notre page facebook <a href="https://www.facebook.com/profile.php?id=61589656914248">cliquez ici pour acceder à notre page facebook</a></p>
+        <p>consulter notre chaine whatsApp <a href="https://whatsapp.com/channel/0029Vb8SR5V7tkjBjldiFS1Q">cliquez ici pour consulter à notre chaine whatsApp</a></p>
         <p style="margin-top: 10px; font-size: 0.8rem;">📸 Immortalisons vos plus beaux moments ensemble</p>
     </footer>
 </body>
