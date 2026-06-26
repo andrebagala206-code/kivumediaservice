@@ -33,7 +33,6 @@ navBtns.forEach(btn => {
 // ==================== FILTRE GALERIE ====================
 const filterBtns = $$('.filter-btn');
 const galleryCards = $$('.card');
-
 filterBtns.forEach(btn => {
     btn.addEventListener('click', function() {
         filterBtns.forEach(b => {
@@ -135,47 +134,40 @@ const setupWhatsAppValidation = (inputId, isForm = false) => {
 setupWhatsAppValidation('whatsapp');
 setupWhatsAppValidation('whatsappForm', true); // DRY : évite duplication
 
-// ==================== FORMULAIRE GÉNÉRIQUE ====================
-const handleFormSubmit = (formId, messageBuilder) => {
-    const form = $(`#${formId}`);
+// ============================================
+// FONCTION GENERIQUE POUR FORMULAIRES
+// ============================================
+
+function handleFormSubmit(formId, callback) {
+    const form = document.getElementById(formId);
     if (!form) return;
     
     form.addEventListener('submit', function(e) {
         e.preventDefault();
-        const formData = new FormData(this);
-        const btn = this.querySelector('button[type="submit"]');
         
-        // Anti-spam : bloque double clic
-        if(btn.disabled) return;
-        const originalText = btn.textContent;
-        btn.disabled = true;
-        btn.textContent = 'Envoi...';
+        // Récupérer les données du formulaire
+        const data = new FormData(e.target);
         
-        const numeroPhoto = "243992126727";
-        const message = messageBuilder(formData);
+        // Construire le message avec le callback
+        const message = callback(data);
         
-        setTimeout(() => { 
-            btn.disabled = false;
-            btn.textContent = originalText;
-        }, 3000);
+        // Votre numéro WhatsApp (sans le 0, avec indicatif 243)
+        const numero = "243992126727";
         
-        window.open(`https://wa.me/${numeroPhoto}?text=${message}`, '_blank');
-        this.reset();
-        alert('✅ Redirection vers WhatsApp réussie !');
+        // Encoder le message pour l'URL
+        const url = `https://wa.me/${numero}?text=${encodeURIComponent(message)}`;
+        
+        // Ouvrir WhatsApp
+        window.open(url, '_blank');
+        
+        // Message de confirmation
+        alert('✅ Demande préparée ! Redirection vers WhatsApp.');
+        
+        // Optionnel : réinitialiser le formulaire
+        // e.target.reset();
     });
-};
+}
 
-// FORMULAIRE RÉSERVATION
-handleFormSubmit('formReservation', (data) => {
-    const insta = data.get('insta') ? `%0A*Insta:* ${data.get('insta')}` : '';
-    const facebook = data.get('facebook') ? `%0A*Facebook:* ${data.get('facebook')}` : '';
-    return `*📸 NOUVELLE RÉSERVATION*%0A%0A*Nom:* ${data.get('nom')}%0A*WhatsApp:* ${data.get('whatsapp')}${insta}${facebook}%0A*Date:* ${data.get('date')}%0A*Type:* ${data.get('ceremonie')}%0A*Détails:* ${data.get('details') || 'Aucun'}%0A%0A_Merci de me confirmer la disponibilité_`;
-});
-
-// FORMULAIRE FORMATION  
-handleFormSubmit('formFormation', (data) => {
-    return `*🎓 DEMANDE FORMATION PHOTO*%0A%0A*Nom:* ${data.get('nomForm')}%0A*WhatsApp:* ${data.get('whatsappForm')}%0A*Pack:* ${data.get('packForm')}%0A*Motivation:* ${data.get('motivation') || 'Non spécifiée'}`;
-});
 
 // ==================== SCROLL TO TOP ====================
 const scrollTopBtn = $('#scrollTop');
@@ -242,5 +234,77 @@ function initDarkMode() {
 }
 
 initDarkMode();
+
+// ============================================
+// CODE POUR LES FORMULAIRES UNIQUEMENT
+// À AJOUTER À LA FIN DE VOTRE FICHIER script.js
+// ============================================
+
+// Formulaire de réservation
+const formReservation = document.getElementById('formReservation');
+if (formReservation) {
+    formReservation.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Récupérer les valeurs
+        const nom = document.getElementById('nom').value;
+        const whatsapp = document.getElementById('whatsapp').value;
+        const insta = document.getElementById('insta').value;
+        const facebook = document.getElementById('facebook').value;
+        const date = document.getElementById('date').value;
+        const ceremonie = document.getElementById('ceremonie').value;
+        const details = document.getElementById('details').value;
+        
+        // Vérifications
+        if (!nom || !whatsapp || !date || !ceremonie) {
+            alert('Veuillez remplir tous les champs obligatoires');
+            return;
+        }
+        
+        // Construire le message
+        let message = `*📸 NOUVELLE RÉSERVATION*%0A%0A`;
+        message += `*Nom:* ${nom}%0A`;
+        message += `*WhatsApp:* ${whatsapp}%0A`;
+        if (insta) message += `*Insta:* ${insta}%0A`;
+        if (facebook) message += `*Facebook:* ${facebook}%0A`;
+        message += `*Date:* ${date}%0A`;
+        message += `*Type:* ${ceremonie}%0A`;
+        message += `*Détails:* ${details || 'Aucun'}%0A%0A`;
+        message += `_Merci de confirmer la disponibilité_`;
+        
+        // Envoyer
+        window.open(`https://wa.me/243992126727?text=${message}`, '_blank');
+    });
+}
+
+// Formulaire de formation
+const formFormation = document.getElementById('formFormation');
+if (formFormation) {
+    formFormation.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Récupérer les valeurs
+        const nom = document.getElementById('nomForm').value;
+        const whatsapp = document.getElementById('whatsappForm').value;
+        const pack = document.getElementById('packForm').value;
+        const motivation = document.getElementById('motivation').value;
+        
+        // Vérifications
+        if (!nom || !whatsapp || !pack) {
+            alert('Veuillez remplir tous les champs obligatoires');
+            return;
+        }
+        
+        // Construire le message
+        let message = `*🎓 DEMANDE FORMATION PHOTO*%0A%0A`;
+        message += `*Nom:* ${nom}%0A`;
+        message += `*WhatsApp:* ${whatsapp}%0A`;
+        message += `*Pack:* ${pack}%0A`;
+        if (motivation) message += `*Motivation:* ${motivation}`;
+        
+        // Envoyer
+        window.open(`https://wa.me/243992126727?text=${message}`, '_blank');
+    });
+}
 
 
